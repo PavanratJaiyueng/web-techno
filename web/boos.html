@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>ใบลาออก</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://webme-c5ee7.web.app/Rasd.png" alt="Logo" width="" height="" class="d-inline-block align-text-top">
+            
+          </a>
+        </div>
+      </nav>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            
+            .form-check-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.form-check-input {
+  margin: 0; /* ลบ margin ที่เกิดขึ้นเริ่มต้น */
+  width: 20px; /* ปรับขนาดของ radio button */
+  height: 20px; /* ปรับขนาดของ radio button */
+}
+
+.form-check-label {
+  margin: 0; /* ลบ margin ที่เกิดขึ้นเริ่มต้น */
+  margin-left: 5px;
+}
+
+            #last-updated {
+                position: fixed;
+                top: 10%;
+                right: 0;
+                padding: 10px;
+                
+               
+            }
+            body {
+            font-family: Arial, sans-serif;
+            line-height: 2;
+            max-width: 100%;
+            margin:  auto;
+            padding: 40px;
+            background-image: radial-gradient(circle, rgba(1, 223, 27, 1) 0%, rgba(59, 88, 55, 1) 100%);
+            
+            
+        }
+        form {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="search"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        </style>
+    </head>
+
+    
+  </header>
+  <main>
+    
+    
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">MJU</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">CSMJU</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">มหาลัยเเม่โจ้</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Download</button>
+        </li>
+      </ul>
+      
+      <label for="subject">เรียน อธิการบดี ผ่านคณบดี คณะ</label>
+      <input type="text" name="search" id="subject"pattern="[ก-๙a-zA-Z\s]+" title="กรุณากรอกข้อความเท่านั้น (ภาษาไทยหรือภาษาอังกฤษ)" maxlength="30">
+      <div class="sex">
+        ข้าพระเจ้า
+        <div class="form-check-container">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1"> นาย </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2"> นาง </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+              <label class="form-check-label" for="flexRadioDefault3"> นางสาว </label>
+            </div>
+          </div>
+          
+        </div>
+        <label for="fullname">ชื่อ - นามสกุล</label>
+        <div class="row g-3">
+            <div class="col">
+                <input type="text" id="first-name" class="form-control" placeholder="First name" aria-label="First name" autofocus required pattern="[A-Za-zก-๙ะ-์\s]+">
+            </div>
+            <div class="col">
+                <input type="text" id="last-name" class="form-control" placeholder="Last name" aria-label="Last name" autofocus required pattern="[A-Za-zก-๙ะ-์\s]+">
+            </div>
+        </div>
+        <label for="student-id">รหัสนักศึกษา (10 หลัก)</label>
+            <input type="text" name="usid" id="student-id" required pattern="[0-9]{10}" title="กรุณากรอกรหัสนักศึกษา 10 หลัก" placeholder="650XXXXXXX">
+            
+              
+            <label for="phone">โทรศัพท์มือถือ</label>
+     
+            <input type="tel" name="phone" id="phone" placeholder="โปรดระบุ" required pattern="[0-9]{10}">
+            <div class="sex">
+                หลักสูตร
+                <div class="form-check-container">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1"> ปริญญาตรี 4-5 ปี</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2"> 4 ปีเทียบเข้าเรียน (2 ปี) </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3" checked>
+                      <label class="form-check-label" for="flexRadioDefault3"> ภาคปกติ </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3" checked>
+                        <label class="form-check-label" for="flexRadioDefault3"> ภาคสมทบ </label>
+                      </div>
+                  </div>
+                  
+                </div>
+            <div class="selection-container">
+                <label for="faculty">คณะ</label>
+                <div class="col-auto">
+                  <label class="visually-hidden" for="faculty">คณะ</label>
+                  <input type="text" class="form-control" id="faculty" placeholder="คณะ" pattern="[ก-๙a-zA-Z\s]+" title="กรุณากรอกข้อความเท่านั้น (ภาษาไทยหรือภาษาอังกฤษ)" maxlength="30">
+                  <div id="facultyAutocomplete" class="autocomplete-list"></div>
+                </div>
+              
+                <label for="major">สาขา</label>
+                <div class="col-auto">
+                  <label class="visually-hidden" for="major">สาขา</label>
+                  <input type="text" class="form-control" id="major" placeholder="สาขา" pattern="[ก-๙a-zA-Z\s]+" title="กรุณากรอกข้อความเท่านั้น (ภาษาไทยหรือภาษาอังกฤษ)" maxlength="30">
+                  <div id="majorAutocomplete" class="autocomplete-list"></div>
+                </div>
+              </div>
+              
+              
+              
+            
+              
+              <style>
+                .autocomplete-list {
+                  position: absolute;
+                  background-color: #f9f9f9;
+                  border: 1px solid #b7b7b7;
+                  max-height: 150px;
+                  overflow-y: auto;
+                  z-index: 1;
+                }
+              
+                .autocomplete-list div {
+                  padding: 5px;
+                  cursor: pointer;
+                }
+              
+                .autocomplete-list div:hover {
+                  background-color: #e9e9e9;
+                }
+              </style>
+                 
+            
+            
+                <label for="reason">มีความประสงค์จะขอลาออก เนื่องจาก</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2"></label>
+                  </div>
+                
+                <label>แนบใบยินยอมขอลาออกจากผู้ปกครอง</label>
+                <input type="file" name="signature" id="signature" required>
+                <label for="signature">ลายเซ็น (นักศึกษา)</label>
+                <input type="file" name="signature" id="signature" required>
+    
+                <label>ความเห็นอาจารย์ที่ปรึกษา</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        ทราบ
+                    </label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2"></label>
+                </div>
+                <input type="file" name="signature" id="signature" onchange="addTimestampToFileName(this)" required>
+                
+               
+                   <label>ความเห็นประธานอาจารย์ประจําหลักสูตร</label>
+                   <div class="form-check">
+                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                       <label class="form-check-label" for="flexCheckDefault">
+                           ทราบ
+                       </label>
+                   </div>
+                   <div class="form-floating">
+                       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                       <label for="floatingTextarea2"></label>
+                   </div>
+                   <input type="file" name="signature" id="signature" onchange="addTimestampToFileName(this)" required>
+               
+                
+                <label>ความเห็นคณบดี</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        ทราบ
+                    </label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2"></label>
+                </div>
+                <input type="file" name="signature" id="signature" onchange="addTimestampToFileName(this)" required>
+                
+          
+                 <label>ความเห็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</label>
+                 <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                     <label class="form-check-label" for="flexCheckDefault">
+                         ทราบ
+                     </label>
+                 </div>
+                 <div class="form-floating">
+                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                     <label for="floatingTextarea2"></label>
+                 </div>
+                 <input type="file" name="signature" id="signature" onchange="addTimestampToFileName(this)" required>
+                 
+               
+                 
+                 <label> ความเห็นอธิการบดี</label>
+                 <div class="form-check-container">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1"> อนุมัติ </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2"> ไม่อนุมัติ </label>
+                    </div>
+                </div>
+                 <div class="form-floating">
+                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                     <label for="floatingTextarea2"></label>
+                 </div>
+                 <input type="file" name="signature" id="signature" onchange="addTimestampToFileName(this)" required>
+                 
+                 
+                 <label>ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</label>
+                
+                 <div class="form-floating">
+                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                     <label for="floatingTextarea2"></label>
+                 </div>
+                 <input type="file" name="signature" id="signature" onchange="addTimestampToFileName(this)" required>
+    </main>
+  <footer>
+    
+    <div class="submit1"></div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+   <style>
+   footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* กำหนดความสูงของ footer ตามต้องการ */
+    
+}
+
+.submit1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* กำหนดให้ <div> ขยายเต็มความกว้างของ footer */
+}</style>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+<div id="last-updated">
+    เขียนวันที่: <span id="update-date"></span>
+</div>
+
+<script>
+    // ฟังก์ชันสำหรับเรียกใช้เวลาปัจจุบันและแสดงในรูปแบบ D/M/Y
+    function updateLastUpdatedDate() {
+        const currentDate = new Date();
+        const day = currentDate.getDate();
+        const month = currentDate.getMonth() + 1;
+        const year = currentDate.getFullYear();
+        const formattedDate = `${day}/${month}/${year}`;
+        document.getElementById('update-date').textContent = formattedDate;
+    }
+
+    // เรียกใช้ฟังก์ชันเมื่อหน้าเว็บโหลดเสร็จ
+    window.onload = updateLastUpdatedDate;
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
+
+
+
